@@ -69,6 +69,8 @@ const MyComponent = () => {
   }, [])
 
 
+  // To change the colour of negative value to red
+  
   function renderNegativeCell(params: GridCellParams) {
     const value = params.value as number;
     const isNegative = value < 0;

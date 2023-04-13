@@ -97,27 +97,37 @@ const Chart = () =>{
       type: 'line',
       name: 'LT',
       data: [{x: 0, y: parseFloat(selectedData?.['RWT mm']) }, 
-      {x: 24, y: parseFloat(selectedData?.['LT CR mmpy'])}],
+             {x: 24, y: parseFloat(selectedData?.['LT CR mmpy'])}],
       color: '#72bcd4'
     },
+    // T1, T2, T3, T4 values are hardcoded, need to clarify the equation behind the value 
     {
-      type: 'line',
+      type: 'line',                                       
       name: 'T1',
-      data: [],
-      color: 'yellow'
+      dashStyle: 'Dash',
+      data: [ { x: 3, y:0 },
+              { x: 3, y: parseFloat(selectedData?.['CONC/T-alert mm']) },],
+      color: '#f4c400'
     },{
       type: 'line',
       name: 'T2',
-      data: []
+      dashStyle: 'Dash',
+      data: [ { x: 10, y:0 },
+              { x: 10, y: parseFloat(selectedData?.['CONC/T-alert mm']) },],
+      color: '#f4c400'
     },{
       type: 'line',
       name: 'T3',
-      data: [],
+      dashStyle: 'Dash',
+      data: [ { x: 2, y:0 },
+              { x: 2, y: parseFloat(selectedData?.['MAWT/T-anomaly mm']) },],
       color: 'red'
     },{
       type: 'line',
       name: 'T4',
-      data: [],
+      dashStyle: 'Dash',
+      data: [ { x: 13, y:0 },
+              { x: 13, y: parseFloat(selectedData?.['MAWT/T-anomaly mm']) },],
       color: 'red'
     },
   ]
