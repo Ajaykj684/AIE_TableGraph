@@ -46,19 +46,7 @@ const MyComponent = () => {
 
   const storeCSVtoRedux = (data: Rows[]) => {
     return {
-      No: data.map((item: any) => parseFloat(item['No.'])),
       InspDate: data.map((item: any) => item['Insp. Date']),
-      RWT: data.map((item: any) =>  parseFloat(item['RWT mm'])),
-      MeasurementStatus: data.map((item: any) => item['Measurement Status']),
-      LT: data.map((item: any) => parseFloat(item['LT CR mmpy'])),
-      ST: data.map((item: any) => parseFloat(item['ST CR mmpy'])),
-      NWT: data.map((item: any) => parseFloat(item['NWT mm'])),
-      CONC_T_alert: data.map((item: any) => parseFloat(item['CONC/T-alert mm'])),
-      MAWT_T_anomaly: data.map((item: any) => parseFloat(item['MAWT/T-anomaly mm'])),
-      T1: data.map((item: any) => parseFloat(item['T1 yrs'])),
-      T2: data.map((item: any) => parseFloat(item['T2 yrs'])),
-      T3: data.map((item: any) => parseFloat(item['T3 yrs'])),
-      T4: data.map((item: any) => parseFloat(item['T4 yrs'])),
     };
   };
   
